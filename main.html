@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AERIS | FIELD INTEL</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Archivo', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brutal: {
+                            bg: '#050505',
+                            fg: '#F0F0F0',
+                            accent: '#FF2A00', // Hyper-red/orange
+                            gray: '#1A1A1A',
+                            line: '#333333'
+                        }
+                    },
+                    fontSize: {
+                        'giant': '14vw',
+                        'mega': '8vw',
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    },
+                    cursor: {
+                        'crosshair': 'crosshair',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #F0F0F0;
+            overflow-x: hidden;
+        }
+
+        /* Brutalist Utilities */
+        .border-raw {
+            border: 1px solid #333;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px #333;
+            color: transparent;
+        }
+        
+        .hover-fill:hover {
+            background-color: #FF2A00;
+            color: #050505;
+            border-color: #FF2A00;
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brutal-accent selection:text-black cursor-crosshair">
+
+    <!-- Sticky Nav Grid -->
+    <nav class="fixed top-0 w-full z-50 border-b border-brutal-line bg-brutal-bg mix-blend-difference">
+        <div class="grid grid-cols-12 h-14 items-center">
+            <div class="col-span-4 pl-4 font-sans font-black tracking-tighter text-2xl">
+                AERIS<span class="text-brutal-accent">.</span>
+            </div>
+            <div class="col-span-4 text-center font-mono text-[10px] uppercase hidden md:block">
+                Systems Status: Nominal
+            </div>
+            <div class="col-span-8 md:col-span-4 flex justify-end">
+                <a href="#contact" class="h-14 px-8 border-l border-brutal-line flex items-center font-mono text-xs hover:bg-white hover:text-black transition-colors uppercase">
+                    Get Intel ->
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-14">
+        
+        <!-- HERO: Asymmetric Grid -->
+        <section class="min-h-screen border-b border-brutal-line relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 h-full min-h-[90vh]">
+                <!-- Big Type Area -->
+                <div class="lg:col-span-12 p-6 flex flex-col justify-end relative">
+                    <h1 class="font-sans font-black text-giant leading-[0.8] tracking-tighter mb-4 -ml-2">
+                        AERIS <span class="text-brutal-accent">.</span>
+                    </h1>
+                </div>
+            </div>
+            
+            <!-- Marquee Strip -->
+            <div class="border-y border-brutal-line py-2 bg-white text-black font-mono text-sm uppercase overflow-hidden marquee-container">
+                <div class="marquee-content">
+                    Offline Native /// Edge Computing /// Modular Payloads /// Hierarchical Swarm /// No Cloud Dependency /// Offline Native /// Edge Computing /// Modular Payloads /// Hierarchical Swarm /// No Cloud Dependency ///
+                </div>
+            </div>
+        </section>
+
+        <!-- THE BRUTAL REALITY -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 border-b border-brutal-line">
+            <div class="p-12 lg:p-24 border-b lg:border-b-0 lg:border-r border-brutal-line">
+                <h2 class="font-sans font-bold text-5xl md:text-7xl leading-[0.9] mb-12">
+                    CHAOS IS<br>
+                    THE ENEMY.
+                </h2>
+                <div class="w-12 h-12 bg-brutal-accent animate-pulse"></div>
+            </div>
+            <div class="p-12 lg:p-24 flex flex-col justify-center">
+                <p class="font-mono text-sm md:text-base leading-relaxed text-gray-400 max-w-md">
+                    <span class="text-white block mb-4">// THE PROBLEM</span>
+                    In crisis, data is fragmented. Time is lost stitching together single-drone feeds. Decisions are made in the dark.
+                    <br><br>
+                    <span class="text-white block mb-4">// THE CONSEQUENCE</span>
+                    Slow response. Missed survivors. Preventable failure.
+                </p>
+            </div>
+        </section>
+
+        <!-- AERIS SOLUTION -->
+        <section class="border-b border-brutal-line">
+            <div class="grid grid-cols-1 lg:grid-cols-4">
+                <div class="col-span-1 lg:col-span-1 p-6 border-b lg:border-b-0 lg:border-r border-brutal-line">
+                    <span class="font-mono text-xs text-brutal-accent">01 /// SOLUTION</span>
+                </div>
+                <div class="col-span-1 lg:col-span-3">
+                    <!-- Feature 1 -->
+                    <div class="group border-b border-brutal-line hover:bg-white hover:text-black transition-colors cursor-crosshair">
+                        <div class="p-12 lg:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                            <h3 class="font-sans font-black text-4xl md:text-6xl uppercase">One Map.</h3>
+                            <p class="font-mono text-xs max-w-xs md:text-right group-hover:text-black text-gray-500">
+                                Fuses thermal, LiDAR, and RGB into a single operational picture.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="group border-b border-brutal-line hover:bg-white hover:text-black transition-colors cursor-crosshair">
+                        <div class="p-12 lg:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                            <h3 class="font-sans font-black text-4xl md:text-6xl uppercase">No Cloud.</h3>
+                            <p class="font-mono text-xs max-w-xs md:text-right group-hover:text-black text-gray-500">
+                                Works when the internet is dead. Local mesh network.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="group hover:bg-white hover:text-black transition-colors cursor-crosshair">
+                        <div class="p-12 lg:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                            <h3 class="font-sans font-black text-4xl md:text-6xl uppercase">Swarm IQ.</h3>
+                            <p class="font-mono text-xs max-w-xs md:text-right group-hover:text-black text-gray-500">
+                                Scouts search autonomously. Ranger relays the data.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARCHITECTURE (Visual) -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 border-b border-brutal-line h-screen max-h-[900px]">
+            <!-- Scout -->
+            <div class="relative border-b lg:border-b-0 lg:border-r border-brutal-line p-12 flex flex-col justify-between group overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10">
+                    <h3 class="font-sans font-black text-6xl outline-text text-transparent stroke-white" style="-webkit-text-stroke: 1px white;">SCOUT</h3>
+                    <div class="font-mono text-xs mt-4 space-y-2">
+                        <p>> ROLE: PENETRATION</p>
+                        <p>> SENSOR: THERMAL/RGB/LIDAR</p>
+                        <p>> NAV: SLAM (GPS-DENIED)</p>
+                    </div>
+                </div>
+                <div class="relative z-10 aspect-square border border-gray-800 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                    <div class="w-2/3 h-px bg-brutal-accent"></div>
+                    <div class="h-2/3 w-px bg-brutal-accent"></div>
+                </div>
+            </div>
+
+            <!-- Ranger -->
+            <div class="relative p-12 flex flex-col justify-between group overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative z-10 text-right">
+                    <h3 class="font-sans font-black text-6xl text-white">RANGER</h3>
+                    <div class="font-mono text-xs mt-4 space-y-2 ml-auto inline-block text-left">
+                        <p>> ROLE: OVERWATCH</p>
+                        <p>> SENSOR: DATA FUSION HUB</p>
+                        <p>> COMMS: MESH RELAY</p>
+                    </div>
+                </div>
+                <div class="relative z-10 aspect-square border border-gray-800 rounded-full flex items-center justify-center ml-auto animate-[spin_15s_linear_infinite_reverse]">
+                    <div class="w-full h-px bg-white/20"></div>
+                    <div class="h-full w-px bg-white/20"></div>
+                    <div class="absolute inset-0 border border-dashed border-white/20 rounded-full scale-75"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- USE CASES -->
+        <section class="border-b border-brutal-line bg-white text-black">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-black">
+                <div class="p-12 h-64 flex flex-col justify-between hover:bg-brutal-accent transition-colors">
+                    <span class="font-mono text-xs font-bold">01</span>
+                    <h4 class="font-sans font-bold text-3xl uppercase leading-none">Disaster<br>Response</h4>
+                </div>
+                <div class="p-12 h-64 flex flex-col justify-between hover:bg-brutal-accent transition-colors">
+                    <span class="font-mono text-xs font-bold">02</span>
+                    <h4 class="font-sans font-bold text-3xl uppercase leading-none">Infra<br>Inspection</h4>
+                </div>
+                <div class="p-12 h-64 flex flex-col justify-between hover:bg-brutal-accent transition-colors">
+                    <span class="font-mono text-xs font-bold">03</span>
+                    <h4 class="font-sans font-bold text-3xl uppercase leading-none">Precision<br>Agriculture</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETITIVE -->
+        <section class="p-6 md:p-24 border-b border-brutal-line">
+            <h2 class="font-sans font-black text-4xl mb-12 uppercase">The Hard Truth</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full font-mono text-sm text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-brutal-line text-gray-500">
+                            <th class="py-4 uppercase font-normal">Metric</th>
+                            <th class="py-4 uppercase font-normal text-brutal-accent">AERIS SWARM</th>
+                            <th class="py-4 uppercase font-normal">Consumer Drones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-6 font-bold">Connectivity</td>
+                            <td class="py-6 text-brutal-accent">100% OFFLINE MESH</td>
+                            <td class="py-6 text-gray-500">Cloud Dependent</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-6 font-bold">Pilot Ratio</td>
+                            <td class="py-6 text-brutal-accent">1 : SWARM</td>
+                            <td class="py-6 text-gray-500">1 : 1</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-6 font-bold">Payload</td>
+                            <td class="py-6 text-brutal-accent">MODULAR / HOT-SWAP</td>
+                            <td class="py-6 text-gray-500">Fixed</td>
+                        </tr>
+                        <tr>
+                            <td class="py-6 font-bold">Output</td>
+                            <td class="py-6 text-brutal-accent">ACTIONABLE ALERTS</td>
+                            <td class="py-6 text-gray-500">Raw Video</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-b border-brutal-line">
+            <div class="p-12 border-b md:border-b-0 border-r border-brutal-line hover:bg-gray-900 transition-colors">
+                <span class="font-mono text-xs text-gray-500 block mb-4">CORE SYSTEMS</span>
+                <span class="font-sans font-bold text-xl">DANIEL</span>
+            </div>
+            <div class="p-12 border-b md:border-b-0 md:border-r border-brutal-line hover:bg-gray-900 transition-colors">
+                <span class="font-mono text-xs text-gray-500 block mb-4">OPERATIONS</span>
+                <span class="font-sans font-bold text-xl">AAHAN</span>
+            </div>
+            <div class="p-12 border-b md:border-b-0 border-r border-brutal-line hover:bg-gray-900 transition-colors">
+                <span class="font-mono text-xs text-gray-500 block mb-4">PHYSICAL</span>
+                <span class="font-sans font-bold text-xl">LUCAS</span>
+            </div>
+            <div class="p-12 hover:bg-gray-900 transition-colors">
+                <span class="font-mono text-xs text-gray-500 block mb-4">MISSION CAP</span>
+                <span class="font-sans font-bold text-xl">SAKETH</span>
+            </div>
+        </section>
+
+        <!-- VIDEO PLACEHOLDER -->
+        <section class="border-b border-brutal-line bg-brutal-gray relative group cursor-pointer overflow-hidden h-[50vh]">
+            <!-- Grid Overlay -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+            
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative">
+                    <div class="w-32 h-32 border border-white rounded-full flex items-center justify-center group-hover:bg-brutal-accent group-hover:border-brutal-accent transition-all duration-300">
+                        <i data-lucide="play" class="w-10 h-10 fill-current text-white group-hover:text-black"></i>
+                    </div>
+                    <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 font-mono text-xs uppercase tracking-widest text-center whitespace-nowrap">
+                        Initialize Briefing
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / FOOTER -->
+        <section id="contact" class="bg-brutal-accent text-black p-6 md:p-24 pb-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
+                    <div>
+                        <h2 class="font-sans font-black text-6xl md:text-8xl leading-[0.85] mb-8">
+                            DEPLOY<br>NOW.
+                        </h2>
+                        <p class="font-mono text-sm max-w-sm border-l border-black pl-4">
+                            We are selecting pilot partners for Q3 deployment. Fire departments and infrastructure operators priority.
+                        </p>
+                    </div>
+                    
+                    <form class="space-y-0 border border-black">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="w-full bg-transparent border-b border-black p-6 placeholder-black font-mono focus:outline-none focus:bg-white/10">
+                        <textarea rows="3" placeholder="MISSION BRIEF" class="w-full bg-transparent border-b border-black p-6 placeholder-black font-mono focus:outline-none focus:bg-white/10"></textarea>
+                        <button class="w-full p-6 text-left font-sans font-bold text-xl hover:bg-black hover:text-white transition-colors flex justify-between items-center group">
+                            TRANSMIT
+                            <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-2 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between items-end border-t border-black pt-6 font-mono text-xs">
+                    <div>
+                        © 2024 AERIS SYSTEMS<br>
+                        TOKYO / IOWA
+                    </div>
+                    <div class="flex gap-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:underline">LEGAL</a>
+                        <a href="#" class="hover:underline">PRIVACY</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
